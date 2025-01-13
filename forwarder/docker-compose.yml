@@ -1,0 +1,14 @@
+# Copyright Broadcom, Inc. All Rights Reserved.
+# SPDX-License-Identifier: APACHE-2.0
+version: '3.7'
+
+services:
+  forwarder:
+    container_name: nbt_forwarder
+    image: nbt_forwarder
+    extra_hosts:
+      - staging.bot.rnd.vcs.com:10.255.250.166
+    volumes:
+      - "./app.yml:/app.yml"
+    environment:
+      - CONFIG_PATH=/

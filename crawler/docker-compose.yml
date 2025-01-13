@@ -1,0 +1,13 @@
+# Copyright Broadcom, Inc. All Rights Reserved.
+# SPDX-License-Identifier: APACHE-2.0
+version: '3.7'
+
+services:
+  crawler:
+    container_name: nbt_crawler
+    image: nbt_crawler
+    volumes:
+      - "./app.yml:/app.yaml"
+      - "./data:/data"
+    environment:
+      - CONFIG_PATH=/

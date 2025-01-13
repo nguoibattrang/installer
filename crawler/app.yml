@@ -1,0 +1,10 @@
+logger:
+  mode: development
+crawlers:
+  - type: file
+    path: /data/jira
+    site: jira
+kafka:
+  brokers:
+    - 10.255.250.81:9092
+  topic: train-data

@@ -1,0 +1,15 @@
+source:
+  type: kafka
+  kafka:
+    address:
+      - 10.255.250.81:9092
+    topic: train-data
+    group: nbt-consumer-group3
+
+sink:
+  hostname: staging.bot.rnd.vcs.com
+  secret: "dataset-OuDCyTVkx3fccy1t8iUb8cBO"
+  dataset_id: "319d9707-6f5f-48dd-b75b-63090ee78f08"
+
+logger:
+  mode: development
